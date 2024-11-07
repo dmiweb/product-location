@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+.material-icons {
+  font-size: 2em;
+  color: #696969;
+  cursor: pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.view_module {
+  padding: 20px;
+  text-align: right;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.view_list {
+  padding: 20px;
+  text-align: right;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-view {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  justify-content: space-between;
+  gap: 35px 0;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.shop-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
+  border-radius: 3px;
+  box-shadow: 0px 10px 12px #b3b3b3;
 }
 
-.App-link {
-  color: #61dafb;
+.shop-card-name {
+  position: absolute;
+  top: 0;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.shop-card-color {
+  position: absolute;
+  top: 60px;
+}
+
+.shop-card-img {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.shop-card-price {
+  position: absolute;
+  left: 30px;
+  bottom: 20px;
+  color: #c70000;
+  z-index: 998;
+}
+
+.shop-card .add-cart-btn {
+  display: block;
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+  padding: 5px 10px;
+  border: 1px solid #c70000;
+  border-radius: 30px;
+  color: #c70000;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.item-view {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0 40px;
+}
+
+.shop-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 15px 0 10px;
+  background-color: #f5f5f5;
+}
+
+.shop-item-name {
+  flex: none;
+  min-width: 200px;
+  font-weight: 400;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.shop-item-color {
+  width: 50px;
+  text-align: left;
+}
+
+.shop-item-img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  object-position: 0 -25px;
+}
+
+.shop-item-price {
+  color: #c70000;
+}
+
+.shop-item .add-cart-btn {
+  padding: 5px 10px;
+  border: 1px solid #c70000;
+  border-radius: 30px;
+  color: #c70000;
+  cursor: pointer;
 }
